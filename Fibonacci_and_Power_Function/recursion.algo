@@ -1,0 +1,33 @@
+// Fibonacci 
+FUNCTION fibonacci(n: INTEGER): INTEGER
+VAR
+    result: INTEGER
+BEGIN
+    IF n = 0 THEN
+        RETURN result := 0
+    ELSE IF n = 1 THEN
+        RETURN result := 1
+    ELSE
+        RETURN result := fibonacci(n - 1) + fibonacci(n - 2)
+    END_IF
+
+    RETURN result
+END
+
+
+
+// Power Function
+FUNCTION power(base: INTEGER, exponent: INTEGER): INTEGER
+VAR
+    result: INTEGER
+BEGIN
+    IF exponent = 0 THEN
+        RETURN result := 1
+    ELSE IF exponent > 0 THEN
+        RETURN result := base * power(base, exponent - 1)
+    ELSE
+        RETURN result := 1 / power(base, -exponent) // Handling negative exponents if needed
+    END_IF
+
+    RETURN result
+END

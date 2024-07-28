@@ -1,0 +1,48 @@
+FUNCTION determine_ticket_price
+VAR
+    age: INTEGER
+    price: INTEGER
+BEGIN
+
+    Read(age)
+
+    IF age <= 12 THEN
+        price := 10
+    ELSE IF age <= 17 THEN
+        price := 15
+    ELSE
+        price := 20
+    END_IF
+
+    Write(price)
+END
+
+
+
+ALGORITHM clothing_advice
+VAR
+    temperature: INTEGER
+    is_raining: BOOLEAN
+BEGIN
+    Read(temperature)
+
+    Read(is_raining)
+
+    IF is_raining = TRUE THEN
+        IF temperature < 10 THEN
+            Write("Wear a warm coat and take an umbrella.")
+        ELSE IF temperature < 20 THEN
+            Write("Wear a jacket and take an umbrella.")
+        ELSE
+            Write("Wear light clothing and take an umbrella.")
+        END_IF
+    ELSE
+        IF temperature < 10 THEN
+            Write("Wear a warm coat.")
+        ELSE IF temperature < 20 THEN
+            Write("Wear a jacket.")
+        ELSE
+            Write("Wear light clothing.")
+        END_IF
+    END_IF
+END
